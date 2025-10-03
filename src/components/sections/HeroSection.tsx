@@ -67,7 +67,7 @@ export function HeroSection() {
                 variant="glass"
               >
                 <a
-                  href="https://drive.google.com/file/d/1w5WJoqA0zIyK7n0UdlNkImKEv1lx2Gzp/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1d-AtPrJeeyvTxQygeqqwO46zCFIZ5s2B/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
