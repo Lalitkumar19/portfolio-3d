@@ -17,7 +17,7 @@ Showcasing creativity, smooth animations, and responsive design to highlight ski
 ---
 
 ## 🌐 Live Demo
-🔗 [View Portfolio](https://portfolio-3d.vercel.app)  
+🔗 [View Portfolio](https://portfolio-3d-iota-rose.vercel.app)  
 
 ---
 
