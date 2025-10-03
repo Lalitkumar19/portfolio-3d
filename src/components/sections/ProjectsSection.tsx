@@ -9,40 +9,40 @@ export function ProjectsSection() {
       id: 1,
       title: '3D Portfolio Website',
       description: 'An immersive 3D portfolio built with React Three Fiber, featuring interactive animations and modern design.',
-      image: '/api/placeholder/400/250',
+      image: '/images/project1.png',
       tech: ['React', 'Three.js', 'TypeScript', 'Framer Motion'],
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'https://github.com/Lalitkumar19',
+      githubUrl: 'https://github.com/Lalitkumar19',
       featured: true,
     },
     {
       id: 2,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.',
-      image: '/api/placeholder/400/250',
-      tech: ['Next.js', 'Node.js', 'MongoDB', 'Stripe'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: 'E-Learning Platform',
+      description: 'Full-stack web application for online learning with student dashboard, course management, faculty portal, and secure authentication system.',
+      image: '/images/elearning.png',
+      tech: ['React', 'Node.js', 'MongoDB', 'Docker'],
+      liveUrl: 'http://13.60.241.214/Edutainment/',
+      githubUrl: 'https://github.com/Lalitkumar19/Edutainment',
       featured: true,
     },
     {
       id: 3,
-      title: 'AI Chat Application',
-      description: 'Real-time chat application powered by AI with natural language processing and smart responses.',
-      image: '/api/placeholder/400/250',
-      tech: ['React', 'Socket.io', 'OpenAI', 'Python'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: 'JETSET Hotel',
+      description: 'Modern hotel booking website with responsive design, interactive UI, and smooth user experience.',
+      image: '/images/project3.jpg',
+      tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      liveUrl: 'https://github.com/Lalitkumar19',
+      githubUrl: 'https://github.com/Lalitkumar19',
       featured: false,
     },
     {
       id: 4,
-      title: 'Data Visualization Dashboard',
-      description: 'Interactive dashboard for complex data analysis with real-time charts and filtering capabilities.',
-      image: '/api/placeholder/400/250',
-      tech: ['Vue.js', 'D3.js', 'Node.js', 'PostgreSQL'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: 'GYMNAST',
+      description: 'Responsive fitness website built with JavaScript and Bootstrap for modern gyms and athletes.',
+      image: '/images/project4.jpg',
+      tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      liveUrl: 'https://github.com/Lalitkumar19',
+      githubUrl: 'https://github.com/Lalitkumar19',
       featured: false,
     },
   ];
@@ -51,9 +51,7 @@ export function ProjectsSection() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -63,10 +61,7 @@ export function ProjectsSection() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -74,7 +69,7 @@ export function ProjectsSection() {
     <section className="py-24 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/5 to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -98,11 +93,11 @@ export function ProjectsSection() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
                 rotateY: 2,
                 transition: { duration: 0.3 }
@@ -110,10 +105,17 @@ export function ProjectsSection() {
               className={`perspective ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
             >
               <Card className="glass-card h-full group overflow-hidden transform-3d">
+                {/* Project Image */}
                 <div className="relative overflow-hidden">
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                    <span className="text-6xl opacity-20">🚀</span>
+                  <div className="aspect-video flex items-center justify-center">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
+
+                  {/* Hover Buttons */}
                   <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4 flex gap-2">
                       <Button size="sm" variant="neon" asChild>
@@ -131,7 +133,7 @@ export function ProjectsSection() {
                     </div>
                   </div>
                 </div>
-                
+
                 <CardHeader>
                   <CardTitle className="text-xl font-bold text-primary">
                     {project.title}
@@ -140,7 +142,7 @@ export function ProjectsSection() {
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (

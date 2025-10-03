@@ -5,17 +5,17 @@ export function SkillsSection() {
   const skillCategories = [
     {
       title: 'Frontend',
-      skills: ['React', 'TypeScript', 'Three.js', 'Next.js'],
+      skills: ['React', 'TypeScript', 'Javascript', 'CSS'],
       color: 'neon-cyan'
     },
     {
       title: 'Backend',
-      skills: ['Node.js', 'Python', 'GraphQL', 'MongoDB'],
+      skills: ['Node.js', 'MY SQL', 'MongoDB', 'DBMS'],
       color: 'neon-purple'
     },
     {
       title: 'DevOps',
-      skills: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
+      skills: ['AWS', 'Docker', 'Jenkins', 'CI/CD'],
       color: 'neon-green'
     },
   ];
@@ -37,7 +37,7 @@ export function SkillsSection() {
             <span className="text-gradient">Technical Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Interactive 3D visualization of my technical expertise across full-stack development
+            “My skill set bridges front-end creativity, back-end power, and cloud expertise to deliver complete digital solutions.”
           </p>
         </motion.div>
 

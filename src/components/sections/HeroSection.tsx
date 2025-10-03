@@ -9,60 +9,91 @@ export function HeroSection() {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-space-deep via-background to-space-blue opacity-90" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,theme(colors.neon.cyan/0.3),transparent_50%)]" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold">
-                <span className="text-gradient">Alex</span>{' '}
-                <span className="text-foreground">Chen</span>
+                <span className="text-gradient">Lalit</span>{' '}
+                <span className="text-foreground">Kumar</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-muted-foreground">
                 Full Stack Developer
               </h2>
               <p className="text-lg text-muted-foreground max-w-md">
-                Crafting immersive digital experiences with cutting-edge 3D technology and modern web development.
+                Crafting seamless user experiences and building scalable cloud-native solutions to deliver impactful digital solutions.
               </p>
             </motion.div>
 
             {/* CTA Buttons */}
-            <motion.div 
+            <motion.div
               className="flex flex-wrap gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-            <Button size="lg" variant="neon">
-              View My Work
-            </Button>
-            <Button size="lg" variant="glass">
-              Download CV
-            </Button>
+              {/* View My Work → Projects Section */}
+              <Button
+                asChild
+                size="lg"
+                variant="neon"
+              >
+                <a
+                  href="https://github.com/Lalitkumar19?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View My Work
+                </a>
+              </Button>
+
+
+              {/* Download CV → Google Drive Direct Download */}
+              <Button
+                asChild
+                size="lg"
+                variant="glass"
+              >
+                <a
+                  href="https://drive.google.com/file/d/1w5WJoqA0zIyK7n0UdlNkImKEv1lx2Gzp/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
+              </Button>
             </motion.div>
 
+
             {/* Social Links */}
-            <motion.div 
+            <motion.div
               className="flex gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              {[Github, Linkedin, Mail].map((Icon, index) => (
+              {[
+                { Icon: Github, href: "https://github.com/Lalitkumar19" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/lalit-kumar-a65093257/" },
+                { Icon: Mail, href: "mailto:lalit_kumar22@manavrachna.net" },
+              ].map(({ Icon, href }, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 glass-card hover:bg-secondary/20 transition-all duration-300 hover:scale-110"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -71,6 +102,7 @@ export function HeroSection() {
                 </motion.a>
               ))}
             </motion.div>
+
           </motion.div>
 
           {/* 3D Laptop */}

@@ -4,33 +4,33 @@ import { Code, Palette, Zap, Users } from 'lucide-react';
 
 export function AboutSection() {
   const features = [
-    {
-      icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable code with modern best practices and design patterns.',
-    },
-    {
-      icon: Palette,
-      title: 'Creative Design',
-      description: 'Blending technical expertise with creative vision to build stunning user experiences.',
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: 'Optimizing applications for speed, efficiency, and seamless user interactions.',
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'Working effectively with teams, mentoring developers, and delivering results.',
-    },
+  {
+    icon: Code,
+    title: 'Problem Solver',
+    description: 'Transforming complex challenges into simple, efficient, and working solutions with clean code.',
+  },
+  {
+    icon: Palette,
+    title: 'Design Mindset',
+    description: 'Creating user-friendly and visually appealing interfaces that blend functionality with aesthetics.',
+  },
+  {
+    icon: Zap,
+    title: 'Speed & Efficiency',
+    description: 'Building applications that run fast, feel smooth, and deliver a delightful user experience.',
+  },
+  {
+    icon: Users,
+    title: 'Team Spirit',
+    description: 'Collaborating, learning, and growing with peers to bring impactful projects to life.',
+  },
   ];
 
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-space-blue/10 to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -44,13 +44,14 @@ export function AboutSection() {
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-xl text-muted-foreground">
-              I'm a passionate full-stack developer with a love for creating immersive digital experiences. 
-              With 4+ years of experience in modern web technologies, I specialize in building scalable 
-              applications that combine cutting-edge 3D graphics with robust backend systems.
+              I am a passionate Full Stack Developer with a strong focus on building cloud-native applications that seamlessly integrate functionality, scalability, and user experience.
+              On the front end, I specialize in crafting elegant, responsive, and intuitive interfaces that bring ideas to life with creativity and precision.
+              On the back end, I architect and develop robust, high-performance systems capable of handling complex workflows and large-scale data.
+              Proficient in HTML, CSS, JavaScript, React, Java, MongoDB, and SQL, I also leverage modern DevOps & Cloud technologies like Docker, Jenkins, and AWS to ensure smooth deployment and optimized performance, bridging the gap between aesthetics and architecture.
+              Always learning, always innovating, and always building impactful digital solutions.
             </p>
             <p className="text-lg text-muted-foreground">
-              When I'm not coding, you'll find me exploring the latest in WebGL, contributing to open-source 
-              projects, or sharing knowledge with the developer community through talks and mentoring.
+              Let's connect if you're passionate about tech, startups, cloud, or building the future together! 🤝
             </p>
           </div>
         </motion.div>
@@ -92,9 +93,9 @@ export function AboutSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           {[
-            { number: '50+', label: 'Projects Completed' },
-            { number: '4+', label: 'Years Experience' },
-            { number: '100k+', label: 'Lines of Code' },
+            { number: '20+', label: 'Certifications Earned' },
+            { number: '15+', label: 'GitHub Repositories' },
+            { number: '∞', label: 'Passion for Learning' },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

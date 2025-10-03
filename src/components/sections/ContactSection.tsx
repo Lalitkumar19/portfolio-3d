@@ -10,19 +10,19 @@ export function ContactSection() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex.chen@email.com',
-      href: 'mailto:alex.chen@email.com',
+      value: 'klalit0859@gmail.com',
+      href: 'mailto:klalit0859@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+91 817825 9795',
+      href: 'tel:+91 8178259795',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Delhi , India',
       href: '#',
     },
   ];
